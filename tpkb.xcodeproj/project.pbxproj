@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB1C01211D41C3D90063724F /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		DB9BA96719F4139A00F6722D /* tpkb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tpkb; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9BA97119F413D300F6722D /* hidapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hidapi.h; sourceTree = "<group>"; };
 		DB9BA97219F413E300F6722D /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hid.c; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				DB9BA97419F413ED00F6722D /* tp.cpp */,
 				DB9BA97219F413E300F6722D /* hid.c */,
 				DB9BA97119F413D300F6722D /* hidapi.h */,
+				DB1C01211D41C3D90063724F /* Makefile */,
 			);
 			path = tpkb;
 			sourceTree = "<group>";
@@ -240,6 +242,7 @@
 				DB9BA97019F4139A00F6722D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
