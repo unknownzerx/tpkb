@@ -6,3 +6,4 @@ Utility for 'ThinkPad Compact Bluetooth Keyboard with TrackPoint' (0B47189) for 
   - changes middle button mode
 
 It needs to be run with `sudo`.
+Make sure you don't have Karabiner app launched on your machine (otherwise tpkb won't work)
