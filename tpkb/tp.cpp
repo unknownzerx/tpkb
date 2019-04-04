@@ -16,7 +16,9 @@ int main()
     hid_device *dev = hid_open(vendor_id, product_id, 0);
     
     if (dev == 0) {
-        printf("TP Keyboard not found. Have you run it with 'sudo'?\n");
+        printf("TP Keyboard not found. Possible solutions:\n"
+               " * Have you run tpkb with 'sudo'?\n"
+               " * Make sure you don't have keyboard customizers running (for example Karabiner)\n");
         return 0;
     }
     
