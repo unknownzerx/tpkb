@@ -13,12 +13,25 @@ int main()
         return -1;
     }
     
-    hid_device *dev = hid_open(vendor_id, product_id, 0);
+    hid_device *dev = hid_open(vendor_id, product_id, NULL);
     
     if (dev == 0) {
         printf("TP Keyboard not found. Possible solutions:\n"
                " * Have you run tpkb with 'sudo'?\n"
                " * Make sure you don't have keyboard customizers running (for example Karabiner)\n");
+
+        //Debug support
+        printf("Detected devices:\n");
+        hid_device_info *devs = hid_enumerate(0,0);
+        for (;devs; devs = devs->next) {
+            printf("VID: 0x%04X\tPID: 0x%04X\tManufacturer: %ls\n", 
+                devs->vendor_id, 
+                devs->product_id, 
+                devs->manufacturer_string);
+        }    
+        hid_free_enumeration(devs);
+        devs = NULL;
+       
         return 0;
     }
     
