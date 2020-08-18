@@ -7,13 +7,19 @@
 int main()
 {
     const uint16_t vendor_id = 0x17EF;
-    const uint16_t product_id = 0x6048;
+    const uint16_t product_ids[] = {0x6048, 0x60E1};
     
     if (hid_init()) {
         return -1;
     }
     
-    hid_device *dev = hid_open(vendor_id, product_id, NULL);
+    hid_device *dev = 0;
+    for (int i = 0; i < sizeof(product_ids)/sizeof(uint16_t); ++i) {
+        dev = hid_open(vendor_id, product_ids[i], NULL);
+        if (dev != 0) {
+            break;
+        }
+    }
     
     if (dev == 0) {
         printf("TP Keyboard not found. Possible solutions:\n"
